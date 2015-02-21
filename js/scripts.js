@@ -9,7 +9,10 @@ var Pizza = {
     else if (this.size <= 24) {return 8; }
     else { return 12; }
 
-
+  },
+  sizeRange: function() {
+    if (this.size <= 6 || this.size > 60)
+    { return false; }
+    return true;
   }
-
 };

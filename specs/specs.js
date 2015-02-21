@@ -15,4 +15,12 @@ describe("Pizza", function() {
         expect(salePie.slices()).to.equal(6);
     });
   });
+
+  describe("sizeRange", function() {
+    it("sets a limit on order size", function () {
+      var salePie = Object.create(Pizza);
+      salePie.details(5, "cheese");
+      expect(salePie.sizeRange()).to.equal(false);
+    })
+  })
 });
